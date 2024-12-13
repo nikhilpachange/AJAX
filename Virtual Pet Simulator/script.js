@@ -1,3 +1,4 @@
+
 let happiness = 50;
 let hunger = 50;
 
