@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+    <button onclick="loadData()">Load Data</button>
+
+    <script>
+        function loadData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Perform actions with the response
+                    console.log(this.responseText);
+                }
+            };
+            // Replace 'your-url-here' with the actual API endpoint or file URL
+            xhttp.open('GET', 'your-url-here', true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
